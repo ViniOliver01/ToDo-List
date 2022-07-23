@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    flex: 1;
+    gap: 0.5rem;
+    justify-content: center;
+}
+input{
+    flex-grow: 1;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--gray-700);
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+input::placeholder{
+    color: var(--gray-300);
+    font-size: 1rem;
+}
+button{
+    width: 5.5rem;
+    background-color: var(--blue-dark);
+    color: var(--gray-100);
+    font-size: 0.875rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    border: 1px solid var(--blue-dark);
+
+    gap: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    border: 1px solid var(--gray-700);
+}
+.inputNull{
+    border: 1px solid var(--danger);
+}
+.inputNull::placeholder {
+    color:var(--danger);
+}
