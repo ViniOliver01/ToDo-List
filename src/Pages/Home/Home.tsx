@@ -22,7 +22,6 @@ export function Home(){
   
   ]);
 
-
   function doneTask(status: boolean, id: number, content:string){
 
     const taskListWithoutId = taskList.filter(taskList =>{
@@ -37,8 +36,6 @@ export function Home(){
       done: status,
     }])   
     status ? setFinishedTask(finishedTask + 1) : setFinishedTask(finishedTask - 1)
-
-    console.log(taskListWithoutId);
     
   }
 
