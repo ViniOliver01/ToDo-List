@@ -22,12 +22,24 @@ export function Home(){
   
   ]);
 
-  function doneTask(status: boolean, id: number){
 
-    taskList.filter(id =>{
-      console.log(id.id);
-      
+  function doneTask(status: boolean, id: number, content:string){
+
+    const taskListWithoutId = taskList.filter(taskList =>{
+      return taskList.id != id
     })
+
+        setTaskList([
+     ...taskListWithoutId,
+      {
+      id: id,
+      content: content,
+      done: status,
+    }])   
+    status ? setFinishedTask(finishedTask + 1) : setFinishedTask(finishedTask - 1)
+
+    console.log(taskListWithoutId);
+    
   }
 
   function deleteTask(id: number){

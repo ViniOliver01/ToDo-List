@@ -5,7 +5,7 @@ import { Check, Trash } from 'phosphor-react'
 interface TaskItemProps{
     id: number;
     content: string;
-    onDoneTask: (status: boolean, id: number) => void;
+    onDoneTask: (status: boolean, id: number, content:string) => void;
     onDeleteTask: (id: number) => void;
 }
 
@@ -14,7 +14,7 @@ export function TaskItem({id, content, onDoneTask, onDeleteTask}: TaskItemProps)
 
     function handleCheckBox() {
         setCheckBox(!checkBox)
-        onDoneTask(!checkBox, id)
+        onDoneTask(!checkBox, id, content)
     }
 
     function handleDeleteComment (){
